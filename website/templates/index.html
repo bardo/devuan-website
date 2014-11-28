@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="row">
+    <div class="col-xs-12">
+        <p>Dear Init-Freedom lovers, the Veteran Unix Admin collective salutes you!</p>
+        <p>Our project is called &quot;<strong>Devuan</strong>&quot;.</p>
+        <p>Devuan is spelled in Italian and it is pronounced just like &quot;<strong>DevOne</strong>&quot; in English.</p>
+        <p>Devuan developers can be reached with an e-mail to <script type="text/javascript">
+        <!--
+        h='&#100;&#x65;&#98;&#x69;&#x61;&#110;&#102;&#x6f;&#114;&#x6b;&#46;&#x6f;&#114;&#x67;';a='&#64;';n='&#118;&#x75;&#x61;';e=n+a+h;
+        document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+        // -->
+        </script><noscript>&#118;&#x75;&#x61;&#32;&#x61;&#116;&#32;&#100;&#x65;&#98;&#x69;&#x61;&#110;&#102;&#x6f;&#114;&#x6b;&#32;&#100;&#x6f;&#116;&#32;&#x6f;&#114;&#x67;</noscript>.</p>
+        <h1 id="ok-guys-nevermind-the-names-but-whats-the-plan">OK guys, nevermind the names, but what's the plan?</h1>
+        <p>We started setting up the first bits of a core infrastructure to host a website, mailinglists and a Dak based package repository.</p>
+        <p>We are uploading materials on the <a href="https://github.com/devuan">https://github.com/devuan</a> group which we plan to use as a development platform, at least in this initial phase.</p>
+        <p>We are going to setup a BTS allowing us to inherit many useful Debian development tools and we plan to have a continuous integration system for our packages going from GitHub to a <a href="http://jenkins-debian-glue.org/">Jenkins builder</a> and then to our repositories.</p>
+        <p>We plan to <strong>innovate many of the tools that were historically used in Debian development</strong>, still mainaining stable, testing and unstable package repositories that users and downstream can use.</p>
+        <p>Soon <strong>we will be ready to welcome package maintainers</strong> and then we will focus on refining the continuous integration pipeline and the communication and decision architecture informed by research projects as <a href="http://d-centproject.eu">D-CENT</a>. Besides the package-specific BTS we are going to use <a href="https://github.com/devuan/devuan-baseconf/issues">GitHub issues</a> to coordinate tasks.</p>
+        <p>The first package of Devuan is <code>devuan-baseconf</code>: a Debian installer with preseed of <code>sysvinit-core</code> and a couple of devuan packages containing a keyring, repository list files and pinnings. Once installed and updated this package avoids the requirement of systemd as PID 1 and adopts <code>systemd-shim</code> when strictly needed.</p>
+        <h1 id="what-devuan-should-be-then-is-it-really-a-fork">What Devuan should be then? is it really a fork?</h1>
+        <p>This is just the start of a process, as bold as it sounds to call it a fork of Debian. This exodus is ultimately being a relief for some of us and should lead to the creation a <strong>peaceful space for work we are well able to do</strong>. To help with this adventure and its growth, we ask you to get involved, but also to <a href="http://debianfork.org/donate.html">donate money</a> so that we can cover the costs of setting the new infrastructure in place.</p>
+        <p>Devuan aims to be a base distribution whose mission is <strong>protect the freedom of its community of users and developers</strong>. Its priority is to enable diversity, interoperability and backward compatibility for existing Debian users and downstream distributions willing to preserve Init freedom.</p>
+        <p>Devuan will derive its own installer and package repositories from Debian, modifying them where necessary, with the first goal of <strong>removing systemd, still inheriting the Debian development workflow</strong> while continuing it on a different path: free from bloat as a minimalist base distro should be. Our objective for the spring of 2015 is that users will be able to switch from Debian 7 to Devuan 1 smoothly, as if they would dist-upgrade to Jessie, and start using our package repositories.</p>
+        <p>Devuan will make an effort to rebuild an <strong>infrastructure similar to Debian</strong>, but will also take the opportunity to <strong>innovate some of its practices</strong>. Devuan developers look at this project as a fresh new start for a community of interested people and do not intend to enforce the vexation hierarchy and bureaucracy beyond real cases of emergency. We are well conscious this is possible for us mostly because of <strong>starting small again</strong>; we will do our best to not repeat the same mistakes and we <strong>welcome all Debian Developers</strong> willing to join us on this route.</p>
+        <p>The Devuan distribution will make an effort to <strong>improve the relationship with both upstream and downstream</strong> and, particularly in its gestational phase, will do its best to accomodate needs of those downstream distributions willing to adopt it as base. <strong>We look forward to statements of interest</strong> from such distributions, as well involvement in this planning phase.</p>
+        <p>Devuan will do its best to <strong>stay minimal</strong> and abide to the UNIX philosophy of &quot;<strong>doing one thing and doing it well</strong>&quot;. Devuan perceives itself not as an end product, but a <strong>starting point for developers</strong>, <strong>a viable base for sysadmins</strong> and a <strong>stable tool for people who have experience of Debian</strong>. Devuan will never compromise for more efficiency at the cost of the the freedom of its users, rather than leave such concerns to the independent choices made by downstream developers.</p>
+        <h1 id="if-you-need-devuan-then-join-it-and-support-it-now">If you need Devuan, then join it and support it now!</h1>
+        <p>Designers and creatives: please contribute artworks!</p>
+        <p>Donations: <a href="http://debianfork.org/donate.html">http://debianfork.org/donate.html</a></p>
+        <p>GitHub: <a href="https://github.com/Devuan">https://github.com/Devuan</a></p>
+        <p>Wiki: <a href="http://without-systemd.org/wiki">http://without-systemd.org/wiki</a></p>
+        <p>General discussion (1st mailinglist): <a href="https://mailinglists.dyne.org/cgi-bin/mailman/listinfo/dng">https://mailinglists.dyne.org/cgi-bin/mailman/listinfo/dng</a></p>
+        <p>IRC on freenode: <strong>#debianfork (generic discussion)</strong> and <strong>#devuan (development)</strong>.</p>
+        <p>Happy hacking! :^)</p>
+    </div>
+</article>
+{% endblock %}
