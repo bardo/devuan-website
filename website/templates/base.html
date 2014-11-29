@@ -1,9 +1,20 @@
-<!doctype html>
+{% load staticfiles %}<!doctype html>
 <html class="no-js" lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>{% block title %}Devuan - the GNU/Linux by Veteran Unix Admins{% endblock %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="description" content="Devuan is the base GNU/Linux distribution aiming to replace Debian in order to preserve Init Freedom and avoid the systemd lock-in. Devuan is developed by and for Veteran Unix Admins.">
+        <meta name="keywords" content="debian, fork, systemd, init, freedom, veteran, unix, sysadmin, gnu, linux, distribution">
+
+        <meta property="og:url" content="http://devuan.org/">
+        <meta property="og:title" content="Devuan - the GNU/Linux by Veteran Unix Admins">
+        <meta property="og:description" content="Devuan is the base GNU/Linux distribution aiming to replace Debian in order to preserve Init Freedom and avoid the systemd lock-in. Devuan is developed by and for Veteran Unix Admins.">
+
+        <link rel="shortcut icon" href="{% static "favicon.ico" %}" />
 
         {% block styles %}
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
