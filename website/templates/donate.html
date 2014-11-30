@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="row">
+    <div class="col-xs-12">
+        <h2>Now it's the time to crowdfund our effort!</h2>
+        <p>Funds raised so far:</p>
+        <ul>
+            {% include "fundraising.html" %}
+        </ul>
+        <p>Please be patient to know more as we are updating this by hand/awk scripts.<br>And a big thanks for your support! Useful to get started on infrastructure costs.<br>We will not forget you trusted us so early in the game.</p>
+        <p>Donations go to the Dyne.org non-profit foundation which is<br>administering these finances. The amount as well the way they are<br>invested will be documented on the Devuan website.</p>
+
+        <h2>Donate via Paypal</h2>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_donations">
+            <input type="hidden" name="business" value="foundation@dyne.org">
+            <input type="hidden" name="lc" value="US">
+            <input type="hidden" name="item_name" value="Devuan for Init Freedom">
+            <input type="hidden" name="item_number" value="Devuan">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+
+        <h2>Donate with credit card</h2>
+        <h4>Will open an SSL connection to Stripe.com</h4>
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-lg-6">
+        <table class="table">
+            <tr>
+                <td>
+                    <strong>Donate 10$</strong>
+                </td>
+                <td valign="bottom">
+                    <form action="https://stripe.dyne.org/?action=donation&amount=1000&project=VeteranUnixAdmin" method="POST">
+                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_live_gAf4EDXmfq0aDLyp5pxfW5kn" data-name="Veteran Unix Admins" data-description="Donate 10$ to support Init Freedom" data-amount="1000"></script>
+                    </form>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>Donate 20$</strong>
+                </td>
+                <td valign="bottom">
+                    <form action="https://stripe.dyne.org/?action=donation&amount=2000&project=VeteranUnixAdmin" method="POST">
+                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_live_gAf4EDXmfq0aDLyp5pxfW5kn" data-name="Veteran Unix Admins" data-description="Donate 20$ to support Init Freedom" data-amount="2000"></script>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Donate 30$</strong>
+                </td>
+                <td valign="bottom">
+                    <form action="https://stripe.dyne.org/?action=donation&amount=3000&project=VeteranUnixAdmin" method="POST">
+                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_live_gAf4EDXmfq0aDLyp5pxfW5kn" data-name="Veteran Unix Admins" data-description="Donate 30$ to support Init Freedom" data-amount="3000"></script>
+                    </form>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>Donate 40$</strong>
+                </td>
+                <td valign="bottom">
+                    <form action="https://stripe.dyne.org/?action=donation&amount=4000&project=VeteranUnixAdmin" method="POST">
+                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_live_gAf4EDXmfq0aDLyp5pxfW5kn" data-name="Veteran Unix Admins" data-description="Donate 40$ to support Init Freedom" data-amount="4000"></script>
+                    </form>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>Donate 100$</strong>
+                </td>
+                <td valign="bottom">
+                    <form action="https://stripe.dyne.org/?action=donation&amount=10000&project=VeteranUnixAdmin" method="POST">
+                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_live_gAf4EDXmfq0aDLyp5pxfW5kn" data-name="Veteran Unix Admins" data-description="Donate 100$ to support Init Freedom" data-amount="10000"></script>
+                    </form>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>Donate 200$</strong>
+                </td>
+                <td valign="bottom">
+                    <form action="https://stripe.dyne.org/?action=donation&amount=20000&project=VeteranUnixAdmin" method="POST">
+                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_live_gAf4EDXmfq0aDLyp5pxfW5kn" data-name="Veteran Unix Admins" data-description="Donate 200$ to support Init Freedom" data-amount="20000"></script>
+                    </form>
+                </td>
+            </tr>
+        </table>
+            </div>
+        </div>
+
+        <h2>Donate via direct wire transfer</h2>
+        <p>Dyne.org foundation (non-profit)</p>
+        <p>IBAN: NL87ABNA0406496021</p>
+        <p>BIC: ABNANL2A</p>
+        <p>Please specify '<strong>VUA donation</strong>' in the description.</p>
+
+        <h2>Donate Bitcoins</h2>
+        <h3>1QFbx3bKA8LABAGEaSe7EiP9JCxe2j4fN7</h3>
+        <p>For big donations, membership and sponsorship please do not hesitate to contact us writing a mail to: <script type="text/javascript">
+<!--
+h='&#100;&#x65;&#118;&#x75;&#x61;&#110;&#46;&#x6f;&#114;&#x67;';a='&#64;';n='&#100;&#x6f;&#110;&#x61;&#116;&#x65;';e=n+a+h;
+document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
+// -->
+        </script><noscript>&#100;&#x6f;&#110;&#x61;&#116;&#x65;&#32;&#x61;&#116;&#32;&#100;&#x65;&#118;&#x75;&#x61;&#110;&#32;&#100;&#x6f;&#116;&#32;&#x6f;&#114;&#x67;</noscript>.</p>
+        <p>We are grateful to the <a href="https://www.dyne.org">Dyne.org non-profit foundation</a> for administering the finances for this project. The results of this funding campaign will be public and we will keep you updated about the investments we do and future ways to get involved. Veteran Unix Admins unite!</p>
+    </div>
+</article>
+{% endblock %}

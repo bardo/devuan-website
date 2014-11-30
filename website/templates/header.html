@@ -5,5 +5,9 @@
             <a class="navbar-brand" href="{% url "homepage" %}"><img src="{% static "img/debianfork.svg" %}"></a>
             <p class="navbar-text">Don't panic and keep forking Debian&#8482; :^)</p>
         </div>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li{% if name == 'donate' %} class="active"{% endif %}><a href="{% url "donate" %}">Donate</a>
+        </ul>
     </div>
 </nav>
