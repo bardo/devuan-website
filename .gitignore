@@ -1,3 +1,4 @@
 *.pyc
 *.swp
 env
+devuanweb/settings_prod.py
