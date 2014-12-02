@@ -1,5 +1,5 @@
 {% load staticfiles %}
-<nav class="navbar navbar-default">
+<header class="navbar navbar-default" id="top">
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand" href="{% url "homepage" %}"><img src="{% static "img/debianfork.svg" %}"></a>
@@ -10,4 +10,4 @@
             <li{% if name == 'donate' %} class="active"{% endif %}><a href="{% url "donate" %}">Donate</a>
         </ul>
     </div>
-</nav>
+</header>
