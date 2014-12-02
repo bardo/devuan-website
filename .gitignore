@@ -1,4 +1,5 @@
 *.pyc
 *.swp
 env
+deploy_static
 devuanweb/settings_prod.py
