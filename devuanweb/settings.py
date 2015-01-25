@@ -89,3 +89,12 @@ STATIC_ROOT =  'deploy_static'
 # Bower configuration
 
 BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components/')
+
+
+# Pipeline configuration
+
+PIPELINE_COMPILERS = (
+    'pipeline.compilers.sass.SASSCompiler',
+)
+
+PIPELINE_SASS_BINARY = os.path.join(os.getenv('VIRTUAL_ENV'), 'bin/sassc')
