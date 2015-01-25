@@ -2,4 +2,7 @@
 *.swp
 env
 deploy_static
+components
+
+# Private data
 devuanweb/settings_prod.py
