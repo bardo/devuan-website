@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     #'django.contrib.messages',
     'django.contrib.staticfiles',
     'djangobower',
+    'pipeline',
     'website',
 )
 
@@ -86,6 +87,18 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT =  'deploy_static'
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'website/scss'),
+)
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'pipeline.finders.PipelineFinder',
+)
+
 
 # Bower configuration
 
@@ -99,6 +112,10 @@ BOWER_INSTALLED_APPS = (
 
 # Pipeline configuration
 
+PIPELINE_CSS_COMPRESSOR = None
+
+PIPELINE_JS_COMPRESSOR = None
+
 PIPELINE_COMPILERS = (
     'pipeline.compilers.sass.SASSCompiler',
 )
@@ -106,3 +123,12 @@ PIPELINE_COMPILERS = (
 PIPELINE_SASS_BINARY = os.path.join(os.getenv('VIRTUAL_ENV'), 'bin/sassc')
 
 PIPELINE_SASS_ARGUMENTS = '-I ' + os.path.join(BASE_DIR, 'components/bower_components/bootstrap-sass-official/assets/')
+
+PIPELINE_CSS = {
+    'main': {
+        'source_filenames': (
+            'devuan.scss',
+        ),
+        'output_filename': 'css/devuan.css',
+    },
+}
