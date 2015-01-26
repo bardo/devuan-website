@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     #'django.contrib.sessions',
     #'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djangobower',
     'website',
 )
 
@@ -90,6 +91,11 @@ STATIC_ROOT =  'deploy_static'
 
 BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components/')
 
+BOWER_INSTALLED_APPS = (
+    'bootstrap-sass-official#3.3.3',
+    'jquery#2.1.1',
+)
+
 
 # Pipeline configuration
 
@@ -98,3 +104,5 @@ PIPELINE_COMPILERS = (
 )
 
 PIPELINE_SASS_BINARY = os.path.join(os.getenv('VIRTUAL_ENV'), 'bin/sassc')
+
+PIPELINE_SASS_ARGUMENTS = '-I ' + os.path.join(BASE_DIR, 'components/bower_components/bootstrap-sass-official/assets/')
